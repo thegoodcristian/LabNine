@@ -49,7 +49,11 @@ public class Validator {
 			System.out.print(prompt);
 			if (sc.hasNextDouble()) {
 				d = sc.nextDouble();
-				isValid = true;
+				if (d > 0) {
+					isValid = true;
+				} else {
+					System.out.println("Please only enter a positive number. Try again.");
+				}
 			} else {
 				System.out.println("Error! Invalid decimal value. Try again.");
 			}
